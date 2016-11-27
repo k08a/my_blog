@@ -1,7 +1,7 @@
 <% @posts.each do |post| %>
-    <p><%= post.title %></p>
-    <p><%= post.category %></p>
-    <p><%= post.created_at %></p>
-    <p><%= post.body %></p>
+    <p>タイトル:<%= post.title %></p>
+    <p>カテゴリ:<%= post.category %></p>
+    <p>作成日:<%= post.created_at %></p>
+    <p>本文:<br><%= post.body %></p>
     <hr>
 <% end %>
