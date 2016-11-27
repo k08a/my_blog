@@ -1,7 +1,17 @@
-<% @posts.each do |post| %>
-    <p>タイトル:<%= post.title %></p>
-    <p>カテゴリ:<%= post.category %></p>
-    <p>作成日:<%= post.created_at %></p>
-    <p>本文:<br><%= post.body %></p>
-    <hr>
-<% end %>
+<div class="col-md-8">
+    <% @posts.each do |post| %>
+        <div class="article"><p>タイトル:<%= post.title %></p>
+            <p>カテゴリ:<%= post.category %></p>
+            <p>作成日:<%= post.created_at %></p>
+            <p>本文:<br><%= post.body %></p>
+            <p><%= truncate(post.body, length: 50) %></p>
+            <hr>
+        </div>
+    <% end %>
+</div>
+<div class="col-md-4">
+    <div class="thumbnail">
+        <h3>著者名:<%= Author.first.name %></h3>
+        <p>詳細:<%= Author.first.description %></p>
+    </div>
+</div>
