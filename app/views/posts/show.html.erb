@@ -6,5 +6,5 @@
 <%= @post.body %></p>
 <hr>
 
-<%= link_to "編集", edit_post_path %>
-<%= link_to "削除", post_path,method: :delete %>
+<%= link_to "編集", edit_post_path, class: "btn btn-default" %>
+<%= link_to "削除", post_path, class: "btn btn-default", method: :delete %>
