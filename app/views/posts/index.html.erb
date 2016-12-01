@@ -1,11 +1,12 @@
 <div class="col-md-8">
     <% @posts.each do |post| %>
-        <div class="article"><p>タイトル:<%= post.title %></p>
+        <div class="article">
+            <h2>タイトル:<%= post.title %></h2>
             <p>カテゴリ:<%= post.category %></p>
             <p>作成日:<%= post.created_at %></p>
             <p>本文:<br><%= post.body %></p>
             <p><%= truncate(post.body, length: 50) %></p>
-            <hr>
+            <p><%= link_to "続きを読む", post, class: "btn btn-default" %></p>
         </div>
     <% end %>
 </div>
